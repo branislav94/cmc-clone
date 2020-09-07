@@ -1,21 +1,74 @@
 import "tailwindcss/tailwind.css";
 import { Link } from "../components/Link";
+import Head from "next/head"
+
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="flex flex-col h-screen">
-      <header className="flex justify-between items-center px-4 py-3 border-b">
-        <MenuIcon className="p-px text-blue-500 w-7 h-7" />
-        <img className="h-10"
-          src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_1.svg?_=61a2093"
-        />
-        <SearchIcon className="p-px text-blue-500 w-7 h-7" />
-      </header>
-      <main className="flex-1">
-        <Component {...pageProps} />
-      </main>
 
-      {/* <footer className="flex border-t border-gray-200">
+    <div>
+
+      <Head>
+        {/* <!-- Must --> */}
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="description" content="Description" />
+        <meta name="keywords" content="Keywords" />
+        <title>Page Title</title>
+        {/* <!-- Android  --> */}
+        <meta name="theme-color" content="red" />
+        <meta name="mobile-web-app-capable" content="yes"></meta>
+        {/* <!-- iOS --> */}
+        <meta name="apple-mobile-web-app-title" content="Application Title" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"></meta>
+        {/* <!-- Tap highlighting  --> */}
+        <meta name="msapplication-tap-highlight" content="no"></meta>
+        {/* <!-- Fitscreen  --> */}
+        <meta name="viewport" content="uc-fitscreen=yes" />
+
+        {/* <!-- Layout mode --> */}
+        <meta name="layoutmode" content="fitscreen/standard" />
+
+        {/* <!-- imagemode - show image even in text only mode  --> */}
+        <meta name="imagemode" content="force" />
+
+        {/* <!-- Orientation  --> */}
+        <meta name="screen-orientation" content="portrait"></meta>
+        {/* <!-- Main Link Tags  --> */}
+        <link href="favicon-16.png" rel="icon" type="image/png" sizes="16x16" />
+        <link href="favicon-32.png" rel="icon" type="image/png" sizes="32x32" />
+        <link href="favicon-48.png" rel="icon" type="image/png" sizes="48x48" />
+
+        {/* <!-- iOS  --> */}
+        <link href="touch-icon-iphone.png" rel="apple-touch-icon" />
+        <link href="touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76" />
+        <link href="touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120" />
+        <link href="touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152" />
+        {/* <!-- Android  --> */}
+        <link href="icon-192x192.png" rel="icon" sizes="192x192"></link>
+        <link href="icon-128x128.png" rel="icon" sizes="128x128"></link>
+        {/* <!-- Others --> */}
+        <link href="favicon.icon" rel="shortcut icon" type="image/x-icon"></link>
+        {/* <!-- Manifest.json  --> */}
+        <link href="/manifest.json" rel="manifest" />
+
+      </Head>
+
+      <div className="flex flex-col h-screen">
+        <header className="flex justify-between items-center px-4 py-3 border-b">
+          <MenuIcon className="p-px text-blue-500 w-7 h-7" />
+          <img className="h-10"
+            src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_1.svg?_=61a2093"
+          />
+          <SearchIcon className="p-px text-blue-500 w-7 h-7" />
+        </header>
+        <main className="flex-1">
+          <Component {...pageProps} />
+        </main>
+
+        {/* <footer className="flex border-t border-gray-200">
 
         <Link to="/">
           <a className="flex items-center justify-center w-1/4 py-3 text-center" href="">
@@ -41,68 +94,69 @@ function MyApp({ Component, pageProps }) {
         </Link>
 
       </footer> */}
-      <footer className="flex border-t border-gray-200">
-        <Link
-          href="/"
-          className="flex items-center justify-center w-1/4 py-5"
-        >
-          {({ isActive }) =>
-            isActive ? (
-              <HomeIcon className="p-px text-blue-500 w-7 h-7" />
-            ) : (
-                <HomeIconEmpty className="p-px text-gray-500 w-7 h-7" />
-              )
-          }
-        </Link>
-        <Link
-          href="/market"
-          className="flex items-center justify-center w-1/4 py-3 text-gray-500"
-        >
-          {({ isActive }) =>
-            isActive ? (
-              <ChartIcon className="p-px text-blue-500 w-7 h-7" />
-            ) : (
-                <ChartIconEmpty className="p-px text-gray-500 w-7 h-7" />
-              )
-          }
-        </Link>
-        <Link
-          href="/portfolio"
-          className="flex items-center justify-center w-1/4 py-3 text-gray-500"
-        >
-          {({ isActive }) =>
-            isActive ? (
-              <PieIcon className="p-px text-blue-500 w-7 h-7" />
-            ) : (
-                <PieIconEmpty className="p-px text-gray-500 w-7 h-7" />
-              )
-          }
-        </Link>
-        <Link
-          href="/news"
-          className="flex items-center justify-center w-1/4 py-3 text-gray-500"
-        >
-          {({ isActive }) =>
-            isActive ? (
-              <NewsIcon className="p-px text-blue-500 w-7 h-7" />
-            ) : (
-                <NewsIconEmpty className="p-px text-gray-500 w-7 h-7" />
-              )
-          }
-        </Link>
-        <Link
-          href="/settings"
-          className="flex items-center justify-center w-1/4 py-3 text-gray-500"
-        >
-          {({ isActive }) =>
-            isActive ? (
-              <DotsIcon className="p-px text-blue-500 w-7 h-7" />
-            ) : (
-                <DotsIconEmpty className="p-px text-gray-500 w-7 h-7" />
-              )
-          }
-        </Link>
-      </footer>
+        <footer className="flex border-t border-gray-200">
+          <Link
+            href="/"
+            className="flex items-center justify-center w-1/4 py-5"
+          >
+            {({ isActive }) =>
+              isActive ? (
+                <HomeIcon className="p-px text-blue-500 w-7 h-7" />
+              ) : (
+                  <HomeIconEmpty className="p-px text-gray-500 w-7 h-7" />
+                )
+            }
+          </Link>
+          <Link
+            href="/market"
+            className="flex items-center justify-center w-1/4 py-3 text-gray-500"
+          >
+            {({ isActive }) =>
+              isActive ? (
+                <ChartIcon className="p-px text-blue-500 w-7 h-7" />
+              ) : (
+                  <ChartIconEmpty className="p-px text-gray-500 w-7 h-7" />
+                )
+            }
+          </Link>
+          <Link
+            href="/portfolio"
+            className="flex items-center justify-center w-1/4 py-3 text-gray-500"
+          >
+            {({ isActive }) =>
+              isActive ? (
+                <PieIcon className="p-px text-blue-500 w-7 h-7" />
+              ) : (
+                  <PieIconEmpty className="p-px text-gray-500 w-7 h-7" />
+                )
+            }
+          </Link>
+          <Link
+            href="/news"
+            className="flex items-center justify-center w-1/4 py-3 text-gray-500"
+          >
+            {({ isActive }) =>
+              isActive ? (
+                <NewsIcon className="p-px text-blue-500 w-7 h-7" />
+              ) : (
+                  <NewsIconEmpty className="p-px text-gray-500 w-7 h-7" />
+                )
+            }
+          </Link>
+          <Link
+            href="/settings"
+            className="flex items-center justify-center w-1/4 py-3 text-gray-500"
+          >
+            {({ isActive }) =>
+              isActive ? (
+                <DotsIcon className="p-px text-blue-500 w-7 h-7" />
+              ) : (
+                  <DotsIconEmpty className="p-px text-gray-500 w-7 h-7" />
+                )
+            }
+          </Link>
+        </footer>
+      </div>
     </div>
   )
 }
@@ -124,14 +178,14 @@ function SearchIcon({ className }) {
 
 function HomeIcon({ className }) {
   return (
-    <svg viewBox="0 0 20 20" fill="currentColor"  className={`fill-current stroke-current stroke-0 ${className}`}><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+    <svg viewBox="0 0 20 20" fill="currentColor" className={`fill-current stroke-current stroke-0 ${className}`}><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
   );
 }
 
 
 function HomeIconEmpty({ className }) {
   return (
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"  className={`stroke-0 ${className}`}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className={`stroke-0 ${className}`}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
   );
 }
 
@@ -174,7 +228,7 @@ function DotsIcon({ className }) {
     <svg viewBox="0 0 20 20"
       fill="currentColor"
       className={`fill-current stroke-current stroke-0 ${className}`}><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" /></svg>
-      );
+  );
 }
 
 
@@ -183,19 +237,19 @@ function DotsIconEmpty({ className }) {
     <svg viewBox="0 0 20 20"
       fill="currentColor"
       className={`fill-current stroke-current stroke-0 ${className}`}><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" /></svg>
-      );
+  );
 }
 
 
 function NewsIcon({ className }) {
   return (
-    <svg viewBox="0 0 20 20" fill="currentColor"  className={`fill-current stroke-current stroke-0 ${className}`}><path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" /><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" /></svg>
-    );
+    <svg viewBox="0 0 20 20" fill="currentColor" className={`fill-current stroke-current stroke-0 ${className}`}><path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" /><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" /></svg>
+  );
 }
 
 
 function NewsIconEmpty({ className }) {
   return (
-<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="newspaper w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
-      );
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="newspaper w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+  );
 }
