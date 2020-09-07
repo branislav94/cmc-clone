@@ -3,7 +3,7 @@
     "rewrites": [
       {
         "source": "/.well-known/(.*)",
-        "destination": "/src/public/well-known/$1"
+        "destination": "public/well-known/$1"
       }
     ]
   }
