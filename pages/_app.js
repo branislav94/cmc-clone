@@ -53,6 +53,8 @@ function MyApp({ Component, pageProps }) {
         <link href="icons/favicon.icon" rel="shortcut icon" type="image/x-icon"></link>
         {/* <!-- Manifest.json  --> */}
         <link href="/manifest.json" rel="manifest" />
+        <link rel="assetlinks.json file" href="%PUBLIC_URL%/.well-known/assetlinks.json"/>
+
 
       </Head>
 
