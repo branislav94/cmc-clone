@@ -15,9 +15,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-        <title>Page Title</title>
+        <title>CoinMarketCap</title>
         {/* <!-- Android  --> */}
-        <meta name="theme-color" content="red" />
+        <meta name="theme-color" content="blue" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
         {/* <!-- iOS --> */}
         <meta name="apple-mobile-web-app-title" content="Application Title" />
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
         {/* <!-- Tap highlighting  --> */}
         <meta name="msapplication-tap-highlight" content="no"></meta>
         {/* <!-- Fitscreen  --> */}
-        <meta name="viewport" content="uc-fitscreen=yes" />
+        {/* <meta name="viewport" content="uc-fitscreen=yes" /> */}
 
         {/* <!-- Layout mode --> */}
         <meta name="layoutmode" content="fitscreen/standard" />
@@ -37,20 +37,20 @@ function MyApp({ Component, pageProps }) {
         {/* <!-- Orientation  --> */}
         <meta name="screen-orientation" content="portrait"></meta>
         {/* <!-- Main Link Tags  --> */}
-        <link href="favicon-16.png" rel="icon" type="image/png" sizes="16x16" />
-        <link href="favicon-32.png" rel="icon" type="image/png" sizes="32x32" />
-        <link href="favicon-48.png" rel="icon" type="image/png" sizes="48x48" />
+        <link href="icons/favicon-16.png" rel="icon" type="image/png" sizes="16x16" />
+        <link href="icons/favicon-32.png" rel="icon" type="image/png" sizes="32x32" />
+        <link href="icons/favicon-48.png" rel="icon" type="image/png" sizes="48x48" />
 
         {/* <!-- iOS  --> */}
-        <link href="touch-icon-iphone.png" rel="apple-touch-icon" />
-        <link href="touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76" />
-        <link href="touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120" />
-        <link href="touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152" />
+        <link href="icons/touch-icon-iphone.png" rel="apple-touch-icon" />
+        <link href="icons/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76" />
+        <link href="icons/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120" />
+        <link href="icons/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152" />
         {/* <!-- Android  --> */}
-        <link href="icon-192x192.png" rel="icon" sizes="192x192"></link>
-        <link href="icon-128x128.png" rel="icon" sizes="128x128"></link>
+        <link href="icons/icon-192x192.png" rel="icon" sizes="192x192"></link>
+        <link href="icons/icon-128x128.png" rel="icon" sizes="128x128"></link>
         {/* <!-- Others --> */}
-        <link href="favicon.icon" rel="shortcut icon" type="image/x-icon"></link>
+        <link href="icons/favicon.icon" rel="shortcut icon" type="image/x-icon"></link>
         {/* <!-- Manifest.json  --> */}
         <link href="/manifest.json" rel="manifest" />
 
