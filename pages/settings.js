@@ -1,5 +1,10 @@
 function Settings() {
-    return <p>Settings</p>
-  }
-  
-  export default Settings;
+  return (
+  <div>
+    <p>Settings</p>
+    <img className="w-40" src="/icons/global-playstore.png" alt="Play Store" />
+  </div>
+  )
+}
+
+export default Settings;
