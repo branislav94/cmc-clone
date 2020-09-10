@@ -21,6 +21,32 @@ module.exports = {
       screens: {
         xs: "480px",
       },
+
+      keyframes: {
+        'wiggle': {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        'flow': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        'slideshow': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        'slide': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-200%)' },
+        },
+      },
+      animation: {
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'flow': 'flow 20s linear infinite',
+        'slideshow': 'slideshow 40s linear infinite',
+        'slideshow2': 'slideshow2 40s linear infinite'
+        
+      },
     },
   },
   variants: {},

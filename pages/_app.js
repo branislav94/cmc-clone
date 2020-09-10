@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import "../assets/custom.css"
 import { Link } from "../components/Link";
 import Head from "next/head"
 
