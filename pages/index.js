@@ -162,11 +162,12 @@ function Home() {
                 <span className="text-xs text-gray-400">Cointelegraph &bull; 3d ago</span>
               </div>
             </div>
+            <Link href="/news">
+              <button class="w-full p-4 bg-gray-100 hover:bg-blue-700 text-black rounded-lg text-sm">See all news</button>
+            </Link>
 
           </div>
-          <button class="my-2 mx-3 w-full bg-gray-100 hover:bg-blue-700 text-black py-2 px-4 rounded-lg text-sm">
-See all news
-</button>
+
 
         </div>
       </div>
