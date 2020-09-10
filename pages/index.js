@@ -1,7 +1,8 @@
+import Link from "next/link";
 
 function Home() {
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-y-hidden	">
       <div className="px-4 py-5 flex justify-between text-white">
         <h1 className="animate-bounce font-medium text-white">Home</h1>
         <SearchIcon className="animate-pulse text-gray-400 w-6 h-6" />
@@ -15,7 +16,7 @@ function Home() {
             <strong> Cryptocurrencies:</strong>  6,978 &bull;
             <strong> Markets:</strong> 28,647</p>
         </div> */}
-        <marquee className="text-xs py-1"behavior="scroll" direction="left"><strong>Market Cap: </strong> $332,907,359,21624h &bull;
+        <marquee className="text-xs py-1" behavior="scroll" direction="left"><strong>Market Cap: </strong> $332,907,359,21624h &bull;
             <strong> Vol: </strong> $129,040,363,032BTC &bull;
             <strong> Dominance:</strong>  57.0% &bull;
             <strong> Cryptocurrencies:</strong>  6,978 &bull;
@@ -49,7 +50,13 @@ function Home() {
               <p className="py-2 px-4 text-xs align-text-middle">Watchlist</p>
             </div>
           </div>
-          <h1 className="py-4 px-3 animate-wiggle font-medium">Top Coins</h1>
+
+          {/* Top Coins  */}
+          <div className="py-4 px-3 flex justify-between">
+            <h1 className=" animate-wiggle font-medium">Top Coins</h1>
+            <Link href='/market'>
+              <a className="text-blue-600 text-sm">See All</a>
+            </Link>          </div>
 
           <div className="flex animate-flow">
             <div className="flex-col p-4 m-2 rounded-lg flex shadow-lg align-middle">
@@ -76,6 +83,90 @@ function Home() {
           </div>
 
 
+          {/* Top Gainers  */}
+          <div className="py-4 px-3 flex justify-between">
+            <div className="flex-col">
+              <h1 className=" animate-wiggle font-medium">Gainers & Losers</h1>
+              <span className="text-xs text-gray-400">Based on Top 100 Coins</span>
+            </div>
+            <Link href='/market'>
+              <a className="text-blue-600 text-sm">See All</a>
+            </Link>
+          </div>
+
+          <div className="flex animate-flow">
+            <div className="flex-col p-4 m-2 rounded-lg flex shadow-lg align-middle">
+              <div className="bg-orange-400 rounded-full w-8 h-8">
+                <USDIcon className="animate-pulse text-white stroke-1 m-2 w-4 h-4" /></div>
+              <p className="pt-4 mr-15 text-sm align-text-middle">Bitcoin</p>
+              <p className="text-gray-400 text-xs align-text-middle">$10,267.64</p>
+              <p className="pt-3 text-xs align-text-middle"><span className="text-green-400">&#9650;</span> 2.63%</p>
+            </div>
+            <div className="flex-col p-4 m-2 rounded-lg flex shadow-lg align-middle">
+              <div className="bg-gray-600 rounded-full w-8 h-8">
+                <USDIcon className="animate-pulse text-white stroke-1 m-2 w-4 h-4" /></div>
+              <p className="pt-4 mr-15 text-sm align-text-middle">Ehereum</p>
+              <p className="text-gray-400 text-xs align-text-middle">$355.34</p>
+              <p className="pt-3 text-xs align-text-middle"><span className="text-red-600">&#9660;</span> -12.63%</p>
+            </div>
+            <div className="flex-col p-4 m-2 rounded-lg flex shadow-lg align-middle">
+              <div className="bg-green-600 rounded-full w-8 h-8">
+                <USDIcon className="animate-pulse text-white stroke-1 m-2 w-4 h-4" /></div>
+              <p className="pt-4 mr-15 text-sm align-text-middle">Tether</p>
+              <p className="text-gray-400 text-xs align-text-middle">$10,267.64</p>
+              <p className="pt-3 text-xs align-text-middle"><span className="text-green-400">&#9650;</span> 2.63%</p>
+            </div>
+          </div>
+
+          {/* Top Gainers  */}
+          <div className="py-4 px-3 flex justify-between">
+            <div className="flex-col">
+              <h1 className=" animate-wiggle font-medium">News</h1>
+              <span className="text-xs text-gray-400">Braking & Trending</span>
+            </div>
+            <Link href='/news'>
+              <a className="text-blue-600 text-sm">See All</a>
+            </Link>
+          </div>
+
+          <div className="flex-col py-4 px-3 ">
+
+            <div className="flex mb-4">
+              <img className="w-20 h-20 rounded-lg" src="https://images.cointelegraph.com/images/638_aHR0cHM6Ly9zMy5ldS1jZW50cmFsLTEuYW1hem9uYXdzLmNvbS9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjAtMDkvMzIwZWI1OGQtOWRhYy00ZjBjLTlmMTctNWY5Yjc2OGE1NDY2LmpwZw==.jpg" />
+              <div className="pl-4 flex-col">
+                <h1 className="">Ren and UMA launch a Bitcoin-backed yield dollar</h1>
+                <span className="text-xs text-gray-400">Cointelegraph &bull; 3d ago</span>
+              </div>
+            </div>
+
+            <div className="flex mb-4">
+              <img className="w-20 h-20 rounded-lg" src="https://images.cointelegraph.com/images/638_aHR0cHM6Ly9zMy5ldS1jZW50cmFsLTEuYW1hem9uYXdzLmNvbS9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjAtMDkvNDQ5M2ZhZDYtMWFhMy00OTYzLWJiYTItZWFhYmUyM2I3MjRmLmpwZw==.jpg" />
+              <div className="pl-4 flex-col">
+                <h1 className="">US legislators approve bills for study of blockchain in commerce</h1>
+                <span className="text-xs text-gray-400">Cointelegraph &bull; 3d ago</span>
+              </div>
+            </div>
+
+            <div className="flex mb-4">
+              <img className="w-20 h-20 rounded-lg" src="https://www.tbstat.com/cdn-cgi/image/q=80/wp/uploads/2020/06/20200601_The_Logbook-Research-1196x675.jpg" />
+              <div className="pl-4 flex-col">
+                <h1 className="">The Logbook: The first time the SEC sued a minor</h1>
+                <span className="text-xs text-gray-400">The Block &bull; 3d ago</span>
+              </div>
+            </div>
+
+            <div className="flex mb-4">
+              <img className="w-20 h-20 rounded-lg" src="https://images.cointelegraph.com/images/638_aHR0cHM6Ly9zMy5ldS1jZW50cmFsLTEuYW1hem9uYXdzLmNvbS9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjAtMDkvYWQ3MzIxMmItNTRmOS00YzJjLWE0OGQtMDI1MjUzZDMzNjY1LmpwZw==.jpg" />
+              <div className="pl-4 flex-col">
+                <h1 className="">ETC labs announces partnership with Chainalysis</h1>
+                <span className="text-xs text-gray-400">Cointelegraph &bull; 3d ago</span>
+              </div>
+            </div>
+
+          </div>
+          <button class="my-2 mx-3 w-full bg-gray-100 hover:bg-blue-700 text-black py-2 px-4 rounded-lg text-sm">
+See all news
+</button>
 
         </div>
       </div>

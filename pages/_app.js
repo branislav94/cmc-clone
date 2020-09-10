@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }) {
 
       </Head>
 
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col w-screen h-screen">
         <header className="flex justify-between items-center px-4 py-3 border-b">
           <MenuIcon className="p-px text-blue-500 w-7 h-7" />
           <img className="h-10"
@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
           />
           <SearchIcon className="p-px text-blue-500 w-7 h-7" />
         </header>
-        <main className="flex-1">
+        <main className="flex-1 overflow-scroll">
           <Component {...pageProps} />
         </main>
 
